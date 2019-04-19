@@ -39,7 +39,8 @@
 	// .catch(fuction(error){
 		// console.error('network error:/n, error);
 	// });
-  var json; //need?
+  var json = [{
+  }]; //need?
 	let postnumber = 0;
 	for(var i = 0; i < 100; i++)
 	{

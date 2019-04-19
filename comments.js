@@ -24,20 +24,24 @@
     });
   });
   
-  let postNumber = 1;
-  fetch('https://jsonplaceholder.typicode.com/post/' + postNumber)
-	.then(function(response) {
-	if (!response.ok){
-		console.log('HTTP error: ' + response.status);
-	} else{
-		return response.json();
-	}
-	})
-	.then(fuction(json) {
-		console.log(json);
-	})
-	.catch(fuction(error){
-		console.error('Network error:/n, error);
-	});
+  // let postnumber = 0;
+  // fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
+	// .then(function(response) {
+	// if (!response.ok){
+		// console.log('http error: ' + response.status);
+	// } else{
+		// return response.json();
+	// }
+	// })
+	// .then(fuction(json) {
+		// console.log(json);
+	// })
+	// .catch(fuction(error){
+		// console.error('network error:/n, error);
+	// });
+	let postnumber = 0;
+  fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
+	.then(response => response.json())
+	.then(json => console.log(json))
 	
 })(window);

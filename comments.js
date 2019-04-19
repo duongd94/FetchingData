@@ -39,15 +39,18 @@
 	// .catch(fuction(error){
 		// console.error('network error:/n, error);
 	// });
-  var json = [{
-  }]; //need?
+  const DATA_SELECTOR = '[data-keys="id"]';
+  var jData = document.querySelector(DATA_SELECTOR);
+
 	let postnumber = 0;
 	for(var i = 0; i < 100; i++)
 	{
 		fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
 			.then(response => response.json())
-			.then(json => console.log(json))
-		for (var key in json){
+			.then(json => console.log(jData))
+      .catch(error => { console.error('Error Fetching')
+    });
+		for (var key in jData){
 			if (json.hasOwnProperty(key)) {
 				alert(json[key].userID);
 				alert(json[key].id);
@@ -57,6 +60,7 @@
 		};
 		postnumber++;
 	};
+
 
 
 })(window);

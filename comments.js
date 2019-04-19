@@ -40,8 +40,8 @@
 		// console.error('network error:/n, error);
 	// });
 	let postnumber = 0;
-  fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
-	.then(response => response.json())
-	.then(json => console.log(json))
+	fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
+		.then(response => response.json())
+		.then(json => console.log(json))
 	
 })(window);

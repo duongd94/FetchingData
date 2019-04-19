@@ -40,8 +40,21 @@
 		// console.error('network error:/n, error);
 	// });
 	let postnumber = 0;
-	fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
-		.then(response => response.json())
-		.then(json => console.log(json))
-	
+	for(var i = 0; i < 100; i++)
+	{
+		fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
+			.then(response => response.json());
+			.then(json => console.log(json));
+		for (var key in json){
+			if (json.hasOwnProperty(key)) {
+				alert(json[key].userID);
+				alert(json[key].id);
+				alert(json[key].title);
+				alert(json[key].body);
+			}
+		};
+		postnumber++;
+	};
+				
+		
 })(window);

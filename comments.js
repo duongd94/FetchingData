@@ -23,7 +23,7 @@
       event.preventDefault();
     });
   });
-  
+
   // let postnumber = 0;
   // fetch('https://jsonplaceholder.typicode.com/post/' + postnumber)
 	// .then(function(response) {
@@ -39,6 +39,7 @@
 	// .catch(fuction(error){
 		// console.error('network error:/n, error);
 	// });
+  var json; //need?
 	let postnumber = 0;
 	for(var i = 0; i < 100; i++)
 	{
@@ -51,10 +52,10 @@
 				alert(json[key].id);
 				alert(json[key].title);
 				alert(json[key].body);
-			}
+			};
 		};
 		postnumber++;
 	};
-				
-		
+
+
 })(window);
